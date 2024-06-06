@@ -1,0 +1,23 @@
+server:
+  port: 8001
+
+spring:
+  cloud:
+    consul:
+      #host: localhost
+      host: 172.19.0.2
+      port: 8500
+      discovery:
+        instanceId: userDemo-8001
+
+  application:
+    name: userDemo
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
